@@ -1,0 +1,106 @@
+﻿////
+|metadata|
+{
+    "name": "categorychart-configuring-axis-intervals",
+    "controlName": ["{CategoryChartName}"],
+    "tags": [],
+    "buildFlags": []
+}
+|metadata|
+////
+
+= Axis Intervals
+
+=== Purpose
+This topic demonstrates explains how to configure the major and minor intervals for chart axes of the {CategoryChartName} control. 
+
+In the {CategoryChartName} control, axis major interval specifies how frequent major gridlines and axis labels are rendered on an axis. Similarly, axis minor interval specifies how frequent minor gridlines are rendered on an axis.
+
+
+=== In this topic
+
+This topic contains the following sections:
+
+
+* <<ConfiguringXAxis,Configuring XAxis and YAxis Major and Minor Intervals>> 
+* <<codesnippet,Code Snippet>>
+* <<RelatedContent,Related Content>>
+
+
+[[ConfiguringXAxis]]
+== Configuring XAxis and YAxis Major and Minor Intervals
+
+[options="header", cols="a,a,a"]
+|====
+|In order to configure|Use this property|And set it to
+
+|The frequency of major interval gridlines	
+|link:{DataChartLink}.{CategoryChartName}{ApiProp}XAxisInterval.html[XAxisInterval], link:{DataChartLink}.{CategoryChartName}{ApiProp}YAxisInterval.html[YAxisInterval] 	
+|This value provides adequate spacing for axis labels and major gridlines, if used. Note that the interval for axis labels will also be set by this value, displaying one label at the point on the axis associated with the interval.
+On X axes, this value is represented as an index between the first and last category item. Generally, this value should equal to 10-20% of total numbers of category items so that all axis labels fit on axis so that they are not clipped by other axis labels.
+On date time axes, this value is represented as time span between axis minimum value and axis maximum value.
+
+On Y axes, this value is represented as double between axis minimum value and axis maximum value. By default, numeric axes will automatically calculate and find a nice and round interval based on axis minimum values and maximum value.
+On date time axes, this value is represented as time span between axis minimum value and axis maximum value.
+
+|The color of the major interval gridlines	
+|link:{DataChartLink}.{CategoryChartName}{ApiProp}XAxisMajorStroke.html[XAxisMajorStroke], link:{DataChartLink}.{CategoryChartName}{ApiProp}YAxisMajorStroke.html[YAxisMajorStroke] 	
+|A color of axis major gridlines.
+|The thickness of the major interval gridlines	
+|link:{DataChartLink}.{CategoryChartName}{ApiProp}XAxisMajorStrokeThickness.html[XAxisMajorStrokeThickness], link:{DataChartLink}.{CategoryChartName}{ApiProp}YAxisMajorStrokeThickness.html[YAxisMajorStrokeThickness]	
+|A thickness in pixels of the axis major gridlines set as a double value
+|The frequency of minor interval gridlines	
+|link:{DataChartLink}.{CategoryChartName}{ApiProp}XAxisMinorInterval.html[XAxisMinorInterval], link:{DataChartLink}.{CategoryChartName}{ApiProp}YAxisMinorInterval.html[YAxisMinorInterval]	
+|This value provides adequate spacing for minor gridlines, which are always rendered between major gridlines. As result, a value of XAxisMinorInterval property should always be much smaller (usually 2-5 time smaller) than the value of XAxisInterval property of an axis.
+On category axes, this value is represented as fraction of major Interval property. Generally, this value should equal to between 0.25 and 0.5
+On numeric axes, this value is represented as double between axis minimum value and axis maximum value. By default, numeric axes will not automatically calculate minor interval based on axis minimum values and maximum value.
+On date time axes, this value is represented as time span between axis minimum value and axis maximum value.
+|The color of the minor interval gridlines	
+|link:{DataChartLink}.{CategoryChartName}{ApiProp}XAxisMinorStroke.html[XAxisMinorStroke], link:{DataChartLink}.{CategoryChartName}{ApiProp}YAxisMinorStroke.html[YAxisMinorStroke]	
+|A color of axis minor gridlines.
+|The thickness of the  minor interval gridlines	
+|link:{DataChartLink}.{CategoryChartName}{ApiProp}XAxisMajorStrokeThickness.html[XAxisMajorStrokeThickness], link:{DataChartLink}.{CategoryChartName}{ApiProp}YAxisMajorStrokeThickness.html[YAxisMajorStrokeThickness]		
+|A thickness in pixels of the axis major gridlines set as a double value
+
+|====
+
+[[codesnippet]]
+== Code Snippet
+
+The following code snippet demonstrates how to configure the interval on the x-axis.
+
+*In XAML:*
+
+----
+<ig:XamCategoryChart x:Name="chart1"  
+                     XAxisInterval="1"
+                     XAxisMinorInterval="1" 
+                     XAxisMinorStroke="Red"    
+                     XAxisMajorStroke="Green"  
+                     XAxisMinorStrokeThickness="1"
+                     XAxisMajorStrokeThickness="1"
+                      />
+----
+
+image::images/categorychart_interval_01.png[]
+
+
+[[RelatedContent]]
+
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic:
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:categorychart-data-binding.html[Data Binding]
+|This topic describes in detail how to bind the control to data.
+
+| link:categorychart-overview.html[Overview]
+|This topic provides a conceptual overview of the category chart control.
+
+|====

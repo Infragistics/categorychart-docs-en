@@ -1,0 +1,80 @@
+﻿////
+|metadata|
+{
+    "name": "categorychart-configuring-axis-tickmarks",
+    "controlName": ["{CategoryChartName}"],
+    "tags": [],
+    "buildFlags": []
+}
+|metadata|
+////
+
+= Axis Tickmarks
+
+Tick marks display points on the axes. They represent a certain numeric point on a scale or the value of the category in a category axis.
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<propertysettings,Property Settings>>
+* <<codesnippet,Code Snippet>>
+* <<RelatedContent,Related Content>>
+
+[[propertysettings]]
+== Property Settings
+
+In the {CategoryChartName} control, you can change the length, thickness and color of the x-axis and y-axis labels using the following properties:
+
+
+[options="header", cols="a,a,a"]
+|====
+|*Property Name*|*Property Type*|*Description*
+
+| link:{CategoryChartLink}.{CategoryChartBase}{ApiProp}XAxisTickLength.html[XAxisTickLength], link:{CategoryChartLink}.{CategoryChartBase}{ApiProp}YAxisTickLength.html[YAxisTickLength]  
+|`Number`
+|Determines the length of the tickmark along the x-axis or y-axis.
+
+| link:{CategoryChartLink}.{CategoryChartBase}{ApiProp}XAxisTickStroke.html[xAxisTickStroke], link:{CategoryChartLink}.{CategoryChartBase}{ApiProp}YAxisTickStroke.html[YAxisTickStroke]  
+|`String`
+|Determines the color of the tickmark along the x-axis or y-axis
+
+| link:{CategoryChartLink}.{CategoryChartBase}{ApiProp}XAxisTickStrokeThickness.html[XAxisTickStrokeThickness], link:{CategoryChartLink}.{CategoryChartBase}{ApiProp}YAxisTickStrokeThickness.html[YAxisTickStrokeThickness]  
+|`Number`
+|Determines the thickness of of the tickmark along the x-axis or y-axis 
+
+|==== 
+
+[[codesnippet]]
+== Code Snippet
+
+The following code snippet demonstrates how to set the color, length and thickness of the tickmark on the x-axis
+
+
+*In XAML:*
+
+[source,xaml]
+----
+<ig:{CategoryChartName} DataContext="{StaticResource DataViewModel}" 
+                        ItemsSource="{Binding EnergySampleData}"
+                        MarkerTypes="Diamond"
+                        ChartType="Line"
+</ig:{CategoryChartName}>
+----
+
+image::images/categorychart_configuring_chart_markers_01.png[]
+
+
+
+[[RelatedContent]]
+== Related Content
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:categorychart-walkthrough.html[Adding Category Chart]
+|This article will get you up and running with the category chart control.
+
+| link:categorychart-chart-types.html[Chart Types]
+|This article describes the available chart types.
