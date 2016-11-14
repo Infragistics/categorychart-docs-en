@@ -42,7 +42,9 @@ In this topic you will define two sets of data collection (flat and hierarchical
 == Supported Chart Types
 
 The ChartType property enables you to choose which series type you wish to display. Configuring the ChartType to Auto will result in the chart selecting an Area or Line series to represent the collection (depending on the amount of data points), otherwise it will resolve to Column series.
+
 Supported series types:
+
 *	Area
 *	Column
 *	Line
@@ -56,6 +58,7 @@ Supported series types:
 In some cases you may need to explicitly define whether or not a particular property associated with your data model needs to plot as a series by the chart. There are two options in which you can tag a property to be either included or excluded by the XamCatagoryChart. 
 
 *Set the Include and Exclude properties*
+
 Each property needs to equal an array of strings which correspond to the names of your properties defined in your data model.
 
 *In C#:*
@@ -111,6 +114,7 @@ End Property
 *Required assembly references:*
 
 Add the following Infragistics assemblies to the SampleApp project:
+
 * InfragisticsWPF4.Controls.Charts.XamDataChart.v{ProductVersion}.dll
 * InfragisticsWPF4.DataVisualization.v{ProductVersion}dll
 * InfragisticsWPF4.v{ProductVersion}.dll
