@@ -19,7 +19,7 @@ This topic explains using a code example how to add the  _{CategoryChartName}_â„
 
 This topic contains the following sections:
 
-* <<Adding,Adding  _{RadialGaugeName}_   to the {PlatformName} application>>
+* <<Adding,Adding  _{CategoryChartName}_   to the {PlatformName} application>>
 
 ** <<Introduction,Introduction>>
 ** <<Preview,Preview>>
