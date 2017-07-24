@@ -68,7 +68,7 @@ ifdef::xaml,win-forms[]
 
 ** {ApiPlatform}DataVisualization{ApiVersion}.dll 
 
-** {ApiPlatform}v{ProductVersion}.dll 
+** {ApiPlatform}{ApiVersion}.dll 
 
 endif::xaml,win-forms[] 
 

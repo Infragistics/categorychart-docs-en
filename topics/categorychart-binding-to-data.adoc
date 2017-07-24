@@ -115,9 +115,9 @@ End Property
 
 Add the following Infragistics assemblies to the SampleApp project:
 
-* InfragisticsWPF4.Controls.Charts.XamDataChart.v{ProductVersion}.dll
-* InfragisticsWPF4.DataVisualization.v{ProductVersion}dll
-* InfragisticsWPF4.v{ProductVersion}.dll
+* {ApiPlatform}Controls.Charts.XamDataChart{ApiVersion}.dll 
+* {ApiPlatform}DataVisualization{ApiVersion}.dll 
+* {ApiPlatform}{ApiVersion}.dll 
 
 *Numeric Fields*
 
